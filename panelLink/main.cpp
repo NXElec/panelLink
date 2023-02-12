@@ -101,25 +101,26 @@ BOOL QueryDeviceEndpoints(WINUSB_INTERFACE_HANDLE hDeviceHandle, PIPE_ID* pipeid
 				{
 					printf("Endpoint index: %d Pipe type: %d Control Pipe ID: %d.\n", index, Pipe.PipeType, Pipe.PipeId);
 				}
-				if (Pipe.PipeType == UsbdPipeTypeIsochronous)
+				else if (Pipe.PipeType == UsbdPipeTypeIsochronous)
 				{
 					printf("Endpoint index: %d Pipe type: %d Isochronous Pipe ID: %d.\n", index, Pipe.PipeType, Pipe.PipeId);
 				}
-				if (Pipe.PipeType == UsbdPipeTypeBulk)
+				else if (Pipe.PipeType == UsbdPipeTypeBulk)
 				{
 					if (USB_ENDPOINT_DIRECTION_IN(Pipe.PipeId))
 					{
 						printf("Endpoint index: %d Pipe type: %d Bulk In Pipe ID: %x.\n", index, Pipe.PipeType, Pipe.PipeId);
 						pipeid->PipeInId = Pipe.PipeId;
 					}
-					if (USB_ENDPOINT_DIRECTION_OUT(Pipe.PipeId))
+					else if (USB_ENDPOINT_DIRECTION_OUT(Pipe.PipeId))
 					{
 						printf("Endpoint index: %d Pipe type: %d Bulk Out Pipe ID: %x.\n", index, Pipe.PipeType, Pipe.PipeId);
 						pipeid->PipeOutId = Pipe.PipeId;
+						break;
 					}
 
 				}
-				if (Pipe.PipeType == UsbdPipeTypeInterrupt)
+				else if (Pipe.PipeType == UsbdPipeTypeInterrupt)
 				{
 					printf("Endpoint index: %d Pipe type: %d Interrupt Pipe ID: %d.\n", index, Pipe.PipeType, Pipe.PipeId);
 				}
