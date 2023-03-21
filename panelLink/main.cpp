@@ -351,7 +351,7 @@ Routine description:
 			return 0;
 		}
 		else {
-			wprintf(L"WinUsb_WritePipe success - %d bytes header.\n", cbSent);
+			wprintf(L"WinUsb_WritePipe success - %d bytes CLEAR header.\n", cbSent);
 		}
 
 		pTemp->type = TYPE_START;
@@ -372,7 +372,7 @@ Routine description:
 			return 0;
 		}
 		else {
-			wprintf(L"WinUsb_WritePipe success - %d bytes header.\n", cbSent);
+			wprintf(L"WinUsb_WritePipe success - %d bytes START header.\n", cbSent);
 		}
 
 		DWORD sections = dwFileSize / (MIN_Buffer_Size * loop);
@@ -421,7 +421,7 @@ Routine description:
 			return 0;
 		}
 		else {
-			wprintf(L"WinUsb_WritePipe success - %d bytes header.\n", cbSent);
+			wprintf(L"WinUsb_WritePipe success - %d bytes END header.\n", cbSent);
 		}
 
 		wprintf(L"File content dump done.\n");
