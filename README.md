@@ -10,9 +10,9 @@ Device found: VID_4E58&PID_1001; bcdUsb 0200
 Device speed: 3 (High speed).
 Endpoint index: 0 Pipe type: 2 Bulk In Pipe ID: 81.
 Endpoint index: 1 Pipe type: 2 Bulk Out Pipe ID: 1.
-WinUsb_WritePipe success - 270 bytes reset.
-WinUsb_WritePipe success - 270 bytes header.
-WinUsb_WritePipe success - 270 bytes header.
+WinUsb_WritePipe success - 270 bytes CLEAR header.
+WinUsb_WritePipe success - 270 bytes START header.
+WinUsb_WritePipe success - 270 bytes END header.
 File content dump done.
 ```
 [BeadaPanel Official Page](http://www.nxelec.com/products/beadapanel-media-display)
