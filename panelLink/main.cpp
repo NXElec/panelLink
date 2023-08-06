@@ -4,9 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* Define for pack type, per PanelLink protocol. */
-#define TYPE_START 1
-#define TYPE_END 2
+/* Define for pack type, per PanelLink protocol v1.0. */
+#define TYPE_START 5
+#define TYPE_END 6
 #define TYPE_RESET 3
 #define TYPE_CLEAR 4
 
@@ -14,7 +14,7 @@
 #pragma pack(1)   // 1 bytes¶ÔÆë
 
 const char protocol_str[] = "PANEL-LINK";
-const char raw_video_str[] = "video/x-raw, format=BGR, height=480, width=800, framerate=0/1";
+const char raw_video_str[] = "video/x-raw, format=RGB16, height=480, width=800, framerate=0/1";
 
 typedef struct _PANELLINK_STREAM_TAG {
 	unsigned char protocol_name[10];
